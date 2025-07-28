@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 260" class="fingerprint-svg" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fingerprint pattern -->
+    <ellipse cx="100" cy="130" rx="80" ry="100" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="70" ry="90" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="60" ry="80" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="50" ry="70" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="40" ry="60" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="30" ry="50" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="20" ry="40" fill="none" stroke="white" stroke-width="2" />
+    <ellipse cx="100" cy="130" rx="10" ry="30" fill="none" stroke="white" stroke-width="2" />
+
+    <!-- Additional fingerprint lines -->
+    <path d="M 60 80 Q 100 60 140 80" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 65 90 Q 100 70 135 90" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 70 100 Q 100 80 130 100" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 75 110 Q 100 90 125 110" fill="none" stroke="white" stroke-width="2" />
+
+    <path d="M 60 180 Q 100 200 140 180" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 65 170 Q 100 190 135 170" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 70 160 Q 100 180 130 160" fill="none" stroke="white" stroke-width="2" />
+    <path d="M 75 150 Q 100 170 125 150" fill="none" stroke="white" stroke-width="2" />
+</svg>
