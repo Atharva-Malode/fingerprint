@@ -42,6 +42,8 @@ class Ui_MainWindow(object):
         self._setup_scanner_section()
         self._setup_prediction_section()
         self._setup_captured_fingers_section()
+        # ✅ Make sure fingerprint label is visible and image fits inside
+
         self._setup_final_actions_section()
         
         # Finalize setup
