@@ -1,0 +1,11 @@
+desktop/myenv/
+desktop/_pycache/
+desktop/*.pyc
+desktop/core/__pycache__/
+desktop/core/__pycache__/*.pyc
+# Ignore all __pycache__ folders recursively
+**/__pycache__/
+**.pyc
+
+# Ignore Python virtual environment
+myenv/
