@@ -7,5 +7,6 @@ desktop/core/__pycache__/*.pyc
 **/__pycache__/
 **.pyc
 
+credential/
 # Ignore Python virtual environment
 myenv/
