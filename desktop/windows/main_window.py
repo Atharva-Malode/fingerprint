@@ -4,10 +4,11 @@ import uuid
 import json
 import cv2
 from PySide6.QtCore import Qt, QTimer, QThread, Signal, Slot
-from PySide6.QtGui import QPixmap, QImage
+from PySide6.QtGui import QPixmap, QImage, QIntValidator, QRegularExpressionValidator, QDoubleValidator
 from PySide6.QtWidgets import QMainWindow, QMessageBox, QApplication
 from UI.ui import Ui_MainWindow
 from core.fingerprint_controller import FingerprintCaptureController
+from PySide6.QtCore import QRegularExpression
 
 
 class MainWindow(QMainWindow):
@@ -71,6 +72,19 @@ class MainWindow(QMainWindow):
         self.ui.dentalDiseaseCheckBox.toggled.connect(self.ui.dentalDiseaseTypeLineEdit.setEnabled)
         self.ui.dentalDiseaseCheckBox.stateChanged.connect(self._update_button_states)
         self.ui.dentalDiseaseTypeLineEdit.textChanged.connect(self._update_button_states)
+
+        name_regex = QRegularExpression("[a-zA-Z\\s]*")
+        name_validator = QRegularExpressionValidator(name_regex, self.ui.nameLineEdit)
+        self.ui.nameLineEdit.setValidator(name_validator)
+        age_validator = QIntValidator(1, 120, self.ui.ageLineEdit)
+        self.ui.ageLineEdit.setValidator(age_validator)
+        pd_cal_validator = QDoubleValidator(0.0, 15.0, 2, self.ui.pdLineEdit)
+        pd_cal_validator.setNotation(QDoubleValidator.StandardNotation)
+        self.ui.pdLineEdit.setValidator(pd_cal_validator)
+        self.ui.calLineEdit.setValidator(pd_cal_validator)
+        hba1c_validator = QDoubleValidator(0.0, 20.0, 2, self.ui.hba1cLineEdit)
+        hba1c_validator.setNotation(QDoubleValidator.StandardNotation)
+        self.ui.hba1cLineEdit.setValidator(hba1c_validator)
 
     def _initialize_ui(self):
         """Set initial UI state."""
