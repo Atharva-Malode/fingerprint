@@ -68,7 +68,7 @@ class MainWindow(QMainWindow):
         self.ui.genderComboBox.currentIndexChanged.connect(self._update_button_states)
         self.ui.groupComboBox.currentIndexChanged.connect(self._update_button_states)
         self.ui.smokingComboBox.currentIndexChanged.connect(self._update_button_states)
-        self.ui.dentalDiseaseCheckBox.stateChanged.connect(self._on_dental_disease_checked)
+        self.ui.dentalDiseaseCheckBox.toggled.connect(self.ui.dentalDiseaseTypeLineEdit.setEnabled)
         self.ui.dentalDiseaseCheckBox.stateChanged.connect(self._update_button_states)
         self.ui.dentalDiseaseTypeLineEdit.textChanged.connect(self._update_button_states)
 
@@ -86,9 +86,9 @@ class MainWindow(QMainWindow):
         self._update_finger_selection()
         self._update_captured_summary()
 
-    def _on_dental_disease_checked(self, state):
-        """Enable/disable dental condition field based on checkbox."""
-        self.ui.dentalDiseaseTypeLineEdit.setEnabled(state == Qt.Checked)
+    # def _on_dental_disease_checked(self, state):
+    #     """Enable/disable dental condition field based on checkbox."""
+    #     self.ui.dentalDiseaseTypeLineEdit.setEnabled(state == Qt.Checked)
 
     def _validate_form_for_preview(self):
         """Validate form for preview - only requires name."""

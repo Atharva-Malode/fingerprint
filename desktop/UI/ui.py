@@ -312,7 +312,6 @@ class Ui_MainWindow(object):
         
         self.dentalDiseaseTypeLineEdit = QLineEdit(self.patientInfoWidget)
         self.dentalDiseaseTypeLineEdit.setObjectName(u"dentalDiseaseTypeLineEdit")
-        self.dentalDiseaseTypeLineEdit.setEnabled(False)
         self.patientInfoGridLayout.addWidget(self.dentalDiseaseTypeLineEdit, 7, 1, 1, 3)
 
     def _setup_fingerprint_section(self):
